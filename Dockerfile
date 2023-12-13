@@ -15,7 +15,7 @@ FROM --platform=$BUILDPLATFORM ruby:3.2.2-slim
 
 COPY fluent.conf /etc/fluent/fluent.conf
 COPY entrypoint.sh /entrypoint.sh
-COPY --from=builder /usr/local/bundle/ /usr/local/bundle 
+COPY --from=builder /usr/local/bundle/ /usr/local/bundle ·
 
 SHELL ["/bin/bash", "-e", "-o", "pipefail", "-c"]
 RUN apt-get update && \
